@@ -1,0 +1,11 @@
+USE `shipping_company`;
+
+DROP FUNCTION IF EXISTS GetAverageCarPrice;
+DELIMITER //
+CREATE FUNCTION GetAverageCarPrice()
+    RETURNS DECIMAL(8, 2)
+    DETERMINISTIC
+BEGIN
+    RETURN (SELECT AVG(price) FROM `car_size`);
+END //
+DELIMITER ;
