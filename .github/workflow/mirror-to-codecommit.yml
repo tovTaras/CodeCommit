@@ -1,4 +1,4 @@
-name: Mirror GitHub To CodeCommit
+name: Mirror GitHub To CodeCommit 
 
 on: [push]
 
